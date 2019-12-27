@@ -1,21 +1,29 @@
-<h2><b>Participants</b></h2>
+{% load static %}
+<head>
+  <title>Participants</title>
+  <link rel="stylesheet" href="{% static 'css/participant_info.css' %}">
+</head>
+
+{% block content %}
+<h2><b>UDN Participants</b></h2>
 
 <table>
-<tr>
-  <td>Name</td>
-  <td>Age</td>
-  <td>Siblings</td>
-  <td>Known environmental exposures</td>
-  <td>Known genetic mutations</td>
-</tr>
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Siblings</th>
+    <th>Known environmental exposures</th>
+    <th>Known genetic mutations</th>
+  </thead>
 
-{% for participant in participants %}
-<tr>
-  <td> {{ participant.name }} </td>
-  <td> {{ participant.age }} </td>
-  <td> {{ participant.num_siblings }} </td>
-  <td> {{ participant.env_exposures }} </td>
-  <td> {{ participant.genetic_mutations }} </td>
-</tr>
-{% endfor %}
+  {% for participant in participants %}
+  <tr>
+    <td> {{ participant.name }} </td>
+    <td> {{ participant.age }} </td>
+    <td> {{ participant.num_siblings }} </td>
+    <td> {{ participant.env_exposures }} </td>
+    <td> {{ participant.genetic_mutations }} </td>
+  </tr>
+  {% endfor %}
 </table>
+{% endblock content %}

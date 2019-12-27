@@ -9,7 +9,7 @@ def all_participants(request):
     return render(request, 'participant_info/all.html', {'participants': Participant.objects.all()})
 
 def index(request):
-    return HttpResponse("Hello, world.  You're at the UDN index.")
+     return HttpResponseRedirect('/participant_info/add_participant')
 
 def add_participant(request):
     submitted = False

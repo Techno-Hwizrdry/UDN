@@ -1,3 +1,6 @@
+#  Let's make a form directly based on the Participant model,
+#  by using a django ModelForm.
+
 from django.utils.translation import gettext_lazy as _
 from django.forms import ModelForm
 from .models      import Participant

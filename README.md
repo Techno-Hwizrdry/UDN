@@ -2,8 +2,11 @@
 This is a small django web app that collects information about participants and lists each participant along with their information.
 
 # Prerequisites
-This Django application requires python3, python3-pip, and python-virutalenv.  Therefore, all 3 must be installed first
-before the app can be used.  They can be installed on a Debian based linux machine, like so:
+This Django application requires python3, python3-pip, and python-virutalenv.  Since this document assumes that UDN
+will run on your local machine (for development only), all 3 must be installed on your local machine before the app can be used.
+To serve this document in a producton (or production-like) environment, please refer to the instructions to serve via [Nginx](https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html) or [Apache](https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/modwsgi/#serving-files).
+
+The prerequisites can be installed on a Debian based linux machine, like so:
 
 `sudo apt-get update && sudo apt-get install python3 python3-pip && pip3 install virtualenv`
 
